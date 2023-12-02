@@ -1,7 +1,7 @@
 Products : 
   data : 
     - name 
-    - flag (new,sale,sale)
+    - flag (new,sale,feature)
     - price 
     - image 
     - reviews :
@@ -21,7 +21,6 @@ Products :
     - images 
     - subtitle 
     - tags 
-    - related 
     - description 
 
 
