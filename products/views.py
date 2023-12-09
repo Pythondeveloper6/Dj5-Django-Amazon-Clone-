@@ -12,7 +12,7 @@ from .models import Product , Brand , Review , ProductImages
 
 class ProductList(ListView):
     model = Product
-    paginate_by = 100
+    paginate_by = 50
     
     
     
