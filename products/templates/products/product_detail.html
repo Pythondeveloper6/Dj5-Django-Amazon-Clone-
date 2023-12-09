@@ -1,4 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
+
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'en/css/product-details.css' %}">
+{% endblock css %}
+
+
 {% block body %}
         <!--=====================================
                     BANNER PART START
@@ -47,33 +55,11 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <ul class="product-navigation">
-                            <li class="product-nav-prev">
-                                <a href="#">
-                                    <i class="icofont-arrow-left"></i>
-                                    prev product
-                                    <span class="product-nav-popup">
-                                        <img src="images/product/02.jpg" alt="product">
-                                        <small>green chilis</small>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="product-nav-next">
-                                <a href="#">
-                                    next product
-                                    <i class="icofont-arrow-right"></i>
-                                    <span class="product-nav-popup">
-                                        <img src="images/product/03.jpg" alt="product">
-                                        <small>green chilis</small>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
                         <div class="details-content">
-                            <h3 class="details-name"><a href="#">existing product name</a></h3>
+                            <h3 class="details-name"><a href="#">{{object.name}}</a></h3>
                             <div class="details-meta">
-                                <p>SKU:<span>1234567</span></p>
-                                <p>BRAND:<a href="#">radhuni</a></p>
+                                <p>SKU:<span>{{object.sku}}</span></p>
+                                <p>BRAND:<a href="#">{{object.brand}}</a></p>
                             </div>
                             <div class="details-rating">
                                 <i class="active icofont-star"></i>
@@ -84,10 +70,9 @@
                                 <a href="#">(3 reviews)</a>
                             </div>
                             <h3 class="details-price">
-                                <del>$38.00</del>
-                                <span>$24.00<small>/per kilo</small></span>
+                                <span>${{object.price}}</span>
                             </h3>
-                            <p class="details-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit facere harum natus amet soluta fuga consectetur alias veritatis quisquam ab eligendi itaque eos maiores quibusdam.</p>
+                            <p class="details-desc"> {{object.subtitle}} </p>
                             <div class="details-list-group">
                                 <label class="details-list-title">tags:</label>
                                 <ul class="details-tag-list">
@@ -146,115 +131,40 @@
                         <div class="product-details-frame">
                             <h3 class="frame-title">Description</h3>
                             <div class="tab-descrip">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, ex! Incidunt nemo aspernatur fugiat, saepe suscipit sit perferendis illum magnam voluptates aliquid blanditiis, dolor assumenda dolorem ullam harum, doloribus molestiae! Unde voluptas maiores exercitationem aperiam debitis accusantium, placeat vero neque, atque eius numquam incidunt, culpa a odit consequatur nostrum aut nisi quisquam sequi dignissimos sed. Odio necessitatibus officiis repudiandae omnis soluta fugiat aliquam eius quae. Unde, ipsam atque assumenda consequuntur quia alias nulla, cupiditate ab quos eveniet pariatur expedita repellendus fugit. Quisquam fuga et, dolore aut temporibus atque itaque nesciunt reiciendis nobis, deleniti nihil vel qui perferendis molestias aliquam doloremque.</p>
+                                <p> {{object.description}}</p>
                             </div>
                         </div>
-                        <div class="product-details-frame">
-                            <h3 class="frame-title">Spacification</h3>
-                            <table class="table table-bordered">
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">Product code</th>
-                                        <td>SKU: 101783</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Weight</th>
-                                        <td>1kg, 2kg</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Styles</th>
-                                        <td>@Girly</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Properties</th>
-                                        <td>Short Dress</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+
                         <div class="product-details-frame">
                             <h3 class="frame-title">Reviews (2)</h3>
                             <ul class="review-list">
-                                <li class="review-item">
-                                    <div class="review-media">
-                                        <a class="review-avatar" href="#">
-                                            <img src="images/avatar/01.jpg" alt="review">
-                                        </a>
-                                        <h5 class="review-meta">
-                                            <a href="#">miron mahmud</a>
-                                            <span>June 02, 2020</span>
-                                        </h5>
-                                    </div>
-                                    <ul class="review-rating">
-                                        <li class="icofont-ui-rating"></li>
-                                        <li class="icofont-ui-rating"></li>
-                                        <li class="icofont-ui-rating"></li>
-                                        <li class="icofont-ui-rating"></li>
-                                        <li class="icofont-ui-rate-blank"></li>
-                                    </ul>
-                                    <p class="review-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus hic amet qui velit, molestiae suscipit perferendis, autem doloremque blanditiis dolores nulla excepturi ea nobis!</p>
-                                    <form class="review-reply">
-                                        <input type="text" placeholder="reply your thoughts">
-                                        <button><i class="icofont-reply"></i>reply</button>
-                                    </form>
-                                    <ul class="review-reply-list">
-                                        <li class="review-reply-item">
-                                            <div class="review-media">
-                                                <a class="review-avatar" href="#">
-                                                    <img src="images/avatar/02.jpg" alt="review">
-                                                </a>
-                                                <h5 class="review-meta">
-                                                    <a href="#">labonno khan</a>
-                                                    <span><b>author -</b> June 02, 2020</span>
-                                                </h5>
-                                            </div>
-                                            <p class="review-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus hic amet qui velit, molestiae suscipit perferendis, autem doloremque blanditiis dolores nulla excepturi ea nobis!</p>
-                                            <form class="review-reply">
-                                                <input type="text" placeholder="reply your thoughts">
-                                                <button><i class="icofont-reply"></i>reply</button>
-                                            </form>
-                                        </li>
-                                        <li class="review-reply-item">
-                                            <div class="review-media">
-                                                <a class="review-avatar" href="#">
-                                                    <img src="images/avatar/03.jpg" alt="review">
-                                                </a>
-                                                <h5 class="review-meta">
-                                                    <a href="#">tahmina bonny</a>
-                                                    <span>June 02, 2020</span>
-                                                </h5>
-                                            </div>
-                                            <p class="review-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus hic amet qui velit, molestiae suscipit perferendis, autem doloremque blanditiis dolores nulla excepturi ea nobis!</p>
-                                            <form class="review-reply">
-                                                <input type="text" placeholder="reply your thoughts">
-                                                <button><i class="icofont-reply"></i>reply</button>
-                                            </form>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="review-item">
-                                    <div class="review-media">
-                                        <a class="review-avatar" href="#">
-                                            <img src="images/avatar/04.jpg" alt="review">
-                                        </a>
-                                        <h5 class="review-meta">
-                                            <a href="#">shipu shikdar</a>
-                                            <span>June 02, 2020</span>
-                                        </h5>
-                                    </div>
-                                    <ul class="review-rating">
-                                        <li class="icofont-ui-rating"></li>
-                                        <li class="icofont-ui-rating"></li>
-                                        <li class="icofont-ui-rating"></li>
-                                        <li class="icofont-ui-rating"></li>
-                                        <li class="icofont-ui-rate-blank"></li>
-                                    </ul>
-                                    <p class="review-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus hic amet qui velit, molestiae suscipit perferendis, autem doloremque blanditiis dolores nulla excepturi ea nobis!</p>
-                                    <form class="review-reply">
-                                        <input type="text" placeholder="reply your thoughts">
-                                        <button><i class="icofont-reply"></i>reply</button>
-                                    </form>
-                                </li>
+                                {% for review in object.review_product.all %}  
+                                    <li class="review-item">
+                                        <div class="review-media">
+                                            <a class="review-avatar" href="#">
+                                                <img src="images/avatar/01.jpg" alt="review">
+                                            </a>
+                                            <h5 class="review-meta">
+                                                <a href="#">{{review.user}}</a>
+                                                <span>June 02, 2020</span>
+                                                <span>{{review.created_at}}</span>
+                                            </h5>
+                                        </div>
+                                        <ul class="review-rating">
+                                            <li class="icofont-ui-rating"></li>
+                                            <li class="icofont-ui-rating"></li>
+                                            <li class="icofont-ui-rating"></li>
+                                            <li class="icofont-ui-rating"></li>
+                                            <li class="icofont-ui-rate-blank"></li>
+                                        </ul>
+                                        <p class="review-desc">{{review.review}}</p>
+                                        <form class="review-reply">
+                                            <input type="text" placeholder="reply your thoughts">
+                                            <button><i class="icofont-reply"></i>reply</button>
+                                        </form>
+                                    </li>
+                                {% endfor %}
+
                             </ul>
                         </div>
                         <div class="product-details-frame">
