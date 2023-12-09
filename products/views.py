@@ -41,6 +41,7 @@ class BrandList(ListView):
 class BrandDetail(ListView):
     model = Product
     template_name = 'products/brand_detail.html'
+    paginate_by = 50
     
     
     def get_queryset(self):
