@@ -1,8 +1,4 @@
 Products : 
-    - list & detail products 
-    - list detail brands 
-    - reviews 
-    - pagination 
     - API products 
 
 
