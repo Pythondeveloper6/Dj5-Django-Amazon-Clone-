@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "taggit",
     'rest_framework',
     'django_filters',
+    'drf_yasg',
     
     # your apps
     'products',
