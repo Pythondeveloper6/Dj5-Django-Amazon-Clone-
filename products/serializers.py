@@ -1,5 +1,17 @@
 from rest_framework import serializers
-from .models import Product , Brand
+from .models import Product , Brand , ProductImages , Review
+
+
+class ProductImagesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProductImages
+        fields = ['image']
+
+
+class ProductReviewsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Review
+        fields = ['user','review','rate','created_at']
 
 
 
@@ -35,6 +47,8 @@ class ProductDetailSerializer(serializers.ModelSerializer):
     brand = serializers.StringRelatedField()
     review_count = serializers.SerializerMethodField()
     avg_rate = serializers.SerializerMethodField()
+    images = ProductImagesSerializer(source='product_image',many=True)
+    reviews = ProductReviewsSerializer(source='review_product',many=True)
     
     class Meta:
         model = Product
@@ -46,7 +60,7 @@ class ProductDetailSerializer(serializers.ModelSerializer):
     
     def get_avg_rate(self,object):
         total = 0  # sum rate : object 
-        reviews = object.review_product.all()
+        reviews = object.review_product.all()  # reviews[]
         
         if len(reviews) > 0:
             for item in reviews:
