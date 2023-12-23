@@ -36,6 +36,15 @@ class Product(models.Model):
     
     def __str__(self):
         return self.name
+    
+    def mahmoud(self):
+        pass
+    
+    class Meta:  # any query
+        ordering = ['-id']
+        verbose_name = 'Product'
+        verbose_name_plural = 'Products'
+        
 
 
 
