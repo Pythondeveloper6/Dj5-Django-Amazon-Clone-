@@ -51,7 +51,7 @@ class ProductDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = '__all__'
-
+        
         
         
 class BrandListSerializer(serializers.ModelSerializer):

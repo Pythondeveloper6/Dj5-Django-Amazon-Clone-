@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     
     # your apps
     'products',
+    'settings',
     
 ]
 

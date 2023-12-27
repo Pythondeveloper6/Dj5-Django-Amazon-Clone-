@@ -1,7 +1,6 @@
 Products : 
-    - queryset API : models 
+    - home page 
     - add review 
-    - custom filter , Code Refactor 
 
 
 Orders : 
