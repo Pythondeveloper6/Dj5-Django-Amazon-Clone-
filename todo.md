@@ -25,6 +25,5 @@ Intermediate :
     - redis 
     - Payment
     - Ajax 
-    - caching 
     - linting 
     - deploy 
