@@ -27,3 +27,4 @@ Intermediate :
     - Ajax 
     - linting 
     - deploy 
+    - Django Default Permissions 
