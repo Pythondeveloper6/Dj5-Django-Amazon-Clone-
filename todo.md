@@ -1,6 +1,3 @@
-Products : 
-    - home page 
-    - add review 
 
 
 Orders : 
