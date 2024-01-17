@@ -1,10 +1,5 @@
 
 
-Orders : 
-    - API Orders , Cart 
-    - product quantity
-
-
 Users : 
     - design models 
     - Add templates
@@ -14,6 +9,7 @@ Users :
 
 Intermediate :
     - docker 
+    - translation
     - celery
     - redis 
     - Payment
