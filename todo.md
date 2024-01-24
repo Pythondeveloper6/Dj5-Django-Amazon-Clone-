@@ -17,3 +17,6 @@ Intermediate :
     - linting 
     - deploy 
     - Django Default Permissions 
+
+Interview 
+- multiple type user 
