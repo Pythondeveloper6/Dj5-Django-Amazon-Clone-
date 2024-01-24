@@ -3866,7 +3866,7 @@ tbody tr td:last-child {
 =========================================*/
 .header-top {
   padding: 8px 0px;
-  background: var(--primary);
+  background: #9b455b
 }
 
 .header-top-welcome p {
