@@ -172,3 +172,6 @@ CACHES = {
         "LOCATION": "redis://127.0.0.1:6379",
     }
 }
+
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
