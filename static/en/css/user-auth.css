@@ -142,7 +142,7 @@
   height: 45px;
   font-size: 14px;
   font-weight: 500;
-  line-height: 45px;
+  /* line-height: 45px; */
   border-radius: 8px;
   letter-spacing: 0.3px;
   text-align: center;

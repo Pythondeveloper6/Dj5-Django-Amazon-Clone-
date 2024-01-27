@@ -1,9 +1,8 @@
 
 
 Users : 
-    - design models 
     - Add templates
-    - API 
+    - API : library 
 
 
 
