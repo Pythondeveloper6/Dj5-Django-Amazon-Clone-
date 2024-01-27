@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'drf_yasg',
     "debug_toolbar",
     "django_bootstrap5",
+    'rest_framework.authtoken',
     
     # your apps
     'products',
@@ -60,7 +61,10 @@ INSTALLED_APPS = [
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 100
+    'PAGE_SIZE': 100,
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ]
 }
 
 
