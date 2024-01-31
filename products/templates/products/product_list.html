@@ -362,8 +362,9 @@
                         </div>
                         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-4">
                             {% for object in object_list %}
+
                                 <div class="col">
-                                    <div class="product-card">
+                                    <div class="product-card {% if object.quantity == 0 %} product-disable {% endif %}">
                                         <div class="product-media">
                                             <div class="product-label">
                                                 <label class="label-text new">{{object.flag}}</label>

@@ -101,6 +101,13 @@ class ProductList(ListView):
     model = Product
     paginate_by = 50
     
+    # show products with quantity only 
+    # def get_queryset(self):
+    #     queryset = super().get_queryset()
+    #     queryset = queryset.filter(quantity__gt=0)
+    #     return queryset
+    
+    
     
     
 # context{} , queryset : Product.objects.all() : 1 : option   2 : method : overide

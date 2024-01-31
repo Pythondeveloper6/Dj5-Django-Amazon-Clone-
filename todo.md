@@ -1,20 +1,23 @@
 
 
 Users : 
-    - Add templates
+    - out of stock : admin
     - API : library 
 
 
 
 Intermediate :
-    - docker 
+    - chartjs 
     - translation
+    - docker 
     - celery
     - redis 
     - Payment
+    - js 
     - Ajax 
     - linting 
     - deploy 
+    - sql 
     - Django Default Permissions 
 
 Interview 
