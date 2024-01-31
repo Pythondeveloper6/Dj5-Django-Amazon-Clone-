@@ -3,12 +3,11 @@
 
 - out of stock : admin
 - admin customization 
+- app_name & brands translation
 
 
 
 Intermediate :
-    - chartjs 
-    - translation
     - docker 
     - celery
     - redis 
