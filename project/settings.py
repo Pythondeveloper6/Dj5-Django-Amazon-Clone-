@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "debug_toolbar",
     "django_bootstrap5",
     'rest_framework.authtoken',
+    'rest_framework_simplejwt',
     
     # your apps
     'products',
@@ -63,7 +64,8 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 100,
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.TokenAuthentication',
+        # 'rest_framework.authentication.TokenAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
     ]
 }
 
