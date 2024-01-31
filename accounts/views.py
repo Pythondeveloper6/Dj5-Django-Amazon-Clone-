@@ -5,6 +5,10 @@ from .forms import SignupForm , UserActivateForm
 from .models import Profile
 
 
+from products.models import Product , Brand , Review
+from orders.models import Order
+
+
 def signup(request):
     '''
         - create new user 
@@ -68,3 +72,28 @@ def user_activate(request,username):
     else:
         form = UserActivateForm()
     return render(request,'accounts/activate.html',{'form':form}) 
+
+
+
+def dashboard(request):
+    users = User.objects.all().count()
+    products = Product.objects.all().count()
+    orders = Order.objects.all().count()
+    brands = Brand.objects.all().count()
+    reviews = Review.objects.all().count()
+    
+    new_products= Product.objects.filter(flag='New').count()
+    sale_products= Product.objects.filter(flag='Sale').count()
+    feature_products= Product.objects.filter(flag='Feature').count()
+    
+    
+    return render(request,'accounts/dashboard.html',{
+        'users': users , 
+        'products': products , 
+        'orders': orders , 
+        'brands': brands , 
+        'reviews': reviews , 
+        "new_products" : new_products , 
+        'sale_products': sale_products , 
+        'feature_products': feature_products
+    })

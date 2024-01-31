@@ -1,8 +1,8 @@
 
 
-Users : 
-    - out of stock : admin
-    - API : library   
+
+- out of stock : admin
+- admin customization 
 
 
 
