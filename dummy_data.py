@@ -37,6 +37,7 @@ def seed_products(n):
             subtitle = fake.text(max_nb_chars=450) , 
             description = fake.text(max_nb_chars=4000) , 
             brand = brands[random.randint(0,len(brands)-1)] , 
+            quantity = random.randint(5,100)
         )
         
     print(f"{n} Products was added successfully")
@@ -46,5 +47,5 @@ def seed_reviews(n):
     pass
 
 
-# seed_brand(200)
+seed_brand(200)
 seed_products(1000)

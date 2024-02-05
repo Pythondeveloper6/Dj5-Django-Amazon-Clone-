@@ -8,16 +8,15 @@
 
 
 Intermediate :
-    - docker 
     - celery
-    - redis 
-    - Payment
+    - Django Default Permissions 
+
     - js 
     - Ajax 
+    - Payment
     - linting 
     - deploy 
     - sql 
-    - Django Default Permissions 
 
 Interview 
 - multiple type user 
