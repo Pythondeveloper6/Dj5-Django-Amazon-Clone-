@@ -28,5 +28,16 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=amazon
 
+  celery:
+    image: celery:4.0.2
+    container_name: celeryserver
+    build: .
+    volumes:
+      - .:/app
+    command: celery -A project worker -l INFO
+    depends_on:
+      - backend
+
+
 volumes:
   postgres_data:
