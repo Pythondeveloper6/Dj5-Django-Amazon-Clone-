@@ -8,9 +8,6 @@
 
 
 Intermediate :
-    - celery
-    - Django Default Permissions 
-
     - js 
     - Ajax 
     - Payment
@@ -18,5 +15,5 @@ Intermediate :
     - deploy 
     - sql 
 
-Interview 
+- Interview 
 - multiple type user 
