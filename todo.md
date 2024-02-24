@@ -1,19 +1,28 @@
 
 
 
-- out of stock : admin
-- admin customization 
-- app_name & brands translation
 
+- app_name & brands translation
+- Ajax
+- Payment : ajax
+- Interview 
 
 
 Intermediate :
-    - js 
-    - Ajax 
-    - Payment
-    - linting 
-    - deploy 
-    - sql 
 
-- Interview 
-- multiple type user 
+
+
+## Recorded :
+- out of stock : admin
+- enhancments
+- admin customization
+- linting
+- multiple type user
+- Flask
+- fastapi
+- react + 4hr 
+- django + ml 
+
+
+
+
